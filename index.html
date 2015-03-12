@@ -1,20 +1,135 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-<title>Untitled Document</title>
-<style>
-.a{width:20%; height:3%; position:fixed; left:32%;top:47%;
-}
-.b{width:12%; height:6%; position:fixed; left:56%;top:47%;font-align:top;
-}
-</style>
-</head>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+           padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .box{
+            width: 789px;
+            height:auto;
+            margin: 0 auto;
 
+        }
+        .list--box{
+            width: 700px;
+            height: 80px;
+            margin: 0 auto;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .list{
+            float: right;
+            padding-top: 10px;
+        }
+        .list--box ul li{
+            cursor: pointer;
+            width: 68px;
+            height: 58px;
+            background: url("http://jjtt.qiniudn.com/2.jpg") no-repeat;
+            float:left;
+            display: block;
+        }
+
+        .changelist{
+            padding-top: 10px;
+        }
+        .changelist .list-1-o{
+            width:240px;
+            height: 240px;
+            border:1px solid #aaaaaa;
+            float: left;
+
+            /*padding-left: 20px;*/
+        }
+        .changelist .list-2-v{
+          width: 700px;
+            height: 120px;
+        }
+    </style>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".list-1").bind("click", function () {
+                $(".list-1").css("backgroundPosition", "0px -58px");
+                $(".list-2").css("backgroundPosition", "-68px -58px");
+                $(".changelist").children().removeClass("list-1-o").addClass("list-2-v");
+
+
+            });
+
+            $(".list-2").bind("click", function () {
+                $(".list-1").css("backgroundPosition", "0px 0px");
+                $(".list-2").css("backgroundPosition", "-68px 0px");
+                $(".changelist").children().removeClass("list-2-v").addClass("list-1-o");
+
+            });
+        })
+    </script>
+</head>
 <body>
-<input class="a" type="text" />
-<input class="b" type="button" value="提交" onclick="">
+<div class="box">
+    <div class="list--box">
+        <ul class="list">
+            <li class="list-1" id="list-1" style="background-position: 0px -55px"></li>
+            <li class="list-2" id="list-2" style="background-position: -68px -55px"></li>
+        </ul>
+    </div>
+    <div>
+        <div class="changelist">
+            <ul>
+                <li class="list-1-o">
+                    <div class="lesson-info">
+                        <img src="http://jjtt.qiniudn.com/1.png" style="width: 240px">
+                        <span>游戏网站制作图标大全</span>
+                    </div>
+                </li>
+                <li class="list-1-o">
+                    <div class="lesson-info">
+                        <img src="http://jjtt.qiniudn.com/1.png" style="width: 240px">
+                        <span>游戏网站制作图标大全</span>
+                    </div>
+                </li>
+                <li class="list-1-o">
+                    <div class="lesson-info">
+                        <img src="http://jjtt.qiniudn.com/1.png" style="width: 240px">
+                        <span>游戏网站制作图标大全</span>
+                    </div>
+                </li>
+                <li class="list-1-o">
+                    <div class="lesson-info">
+                        <img src="http://jjtt.qiniudn.com/1.png" style="width: 240px">
+                        <span>游戏网站制作图标大全</span>
+                    </div>
+                </li>
+                <li class="list-1-o">
+                    <div class="lesson-info">
+                        <img src="http://jjtt.qiniudn.com/1.png" style="width: 240px">
+                        <span>游戏网站制作图标大全</span>
+                    </div>
+                </li>
+                <li class="list-1-o">
+                    <div class="lesson-info">
+                        <img src="http://jjtt.qiniudn.com/1.png" style="width: 240px">
+                        <span>游戏网站制作图标大全</span>
+                    </div>
+                </li>
+                <li class="list-1-o">
+                    <div class="lesson-info">
+                        <img src="1.png" style="width: 240px">
+                        <span>游戏网站制作图标大全</span>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
